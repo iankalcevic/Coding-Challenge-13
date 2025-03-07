@@ -10,3 +10,8 @@ function createElement(name, position) {
     card.setAttribute("id", 'employee${cnt}'); //Set unique id attribute
     card.innerHTML = '<h3>${name}</h3><p>${position}</p>'; //Employee name header, employee position
 };
+
+//Test cases for task 2 
+createElement("Coby White", "Point Guard"); 
+createElement("Matas Buzelis", "Power Forward");
+createElement("Josh Giddey", "Shooting Guard");

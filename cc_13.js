@@ -15,3 +15,12 @@ function createElement(name, position) {
 createElement("Coby White", "Point Guard"); 
 createElement("Matas Buzelis", "Power Forward");
 createElement("Josh Giddey", "Shooting Guard");
+
+// Task 3 - Converting NodeLists to Arrays for Bulk Updates
+
+const employeeCardNodeList = document.querySelectorAll(".employeeCard"); //Select elements with employee card class
+const employeeCardArry = Array.from(employeeCardNodeList); //Convert into an array
+
+employeeCardArray.forEach(card => {
+    card.style.backgroundColor = "red"; //Change background color
+});

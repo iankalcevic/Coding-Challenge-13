@@ -32,3 +32,29 @@ const employeeCardArry = Array.from(employeeCardNodeList); //Convert into an arr
 employeeCardArray.forEach(card => {
     card.style.backgroundColor = "red"; //Change background color
 });
+
+//Task 5 - Inline Editing of Employee Details
+
+editBtn = document.createElement("button"); //Create edit information button
+editBtn.textContent = "Edit information"; //Add text
+
+editBtn.addEventListener("click", (event) => { 
+    svBtn = document.createElement("button"); //Creating a save button
+    svBtn.textContent = "Save information"; //Add text
+    card.replaceChild(svBtn, card.children[2]); //Save button
+    card.children[1].outerHTML += `<input value="${name}"><input value="${position}">`;
+    
+    svBtn.addEventListener("click", (event) => { 
+        card.children[0].textContent = card.children[2].value 
+        card.children[1].textContent = card.children[3].value 
+        event.stopPropagation();
+});
+event.stopPropagation();
+});
+
+card.appendChild(editBtn);
+card.appendChild(deleteBtn); 
+
+employeeContainer.appendChild(card); 
+    
+cnt += 1; //Update counter by 1

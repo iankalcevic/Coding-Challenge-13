@@ -9,6 +9,14 @@ function createElement(name, position) {
     card.setAttribute("class", "employeeCard"); //Set attributes
     card.setAttribute("id", 'employee${cnt}'); //Set unique id attribute
     card.innerHTML = '<h3>${name}</h3><p>${position}</p>'; //Employee name header, employee position
+
+        card.addEventListener("click", () => {console.log('Clicked ${card.id} - ${name}')}); //Task 4 addition
+
+    deleteBtn.addEventListener("click", (event) => { //Task 4 addition
+        employeeContainer.removeChild(card)
+        event.stopPropagation();
+
+    });
 };
 
 //Test cases for task 2 
